@@ -1,0 +1,184 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableLayout  
+    android:id="@+id/tlItems"  
+    android:layout_width="fill_parent"   
+    android:layout_height="wrap_content"   
+    >  
+    <TableRow>  
+        <TextView android:text="税前月入:"/>  
+        <EditText android:id="@+id/etShuiqianNum"  
+            android:layout_width="wrap_content"   
+            android:layout_height="wrap_content"  
+            android:inputType="numberDecimal"  
+            android:layout_weight="1"  
+            android:hint="请输入"  
+            android:textColor="#FF00FF"  
+            android:text=""/>  
+        <TextView android:text="税后月入 :" android:textColor="#00FF00"/>  
+        <EditText android:id="@+id/etShuihouNum"  
+            android:layout_width="wrap_content"   
+            android:layout_height="wrap_content"  
+            android:inputType="numberDecimal"  
+            android:layout_weight="1"  
+            android:textColor="#0000FF"  
+            android:text=""/>  
+    </TableRow>  
+    <TableRow>  
+        <TextView android:text="缴纳个税:"/>  
+        <EditText android:id="@+id/etGeshui"  
+            android:layout_width="wrap_content"   
+            android:layout_height="wrap_content"  
+            android:cursorVisible="false"  
+            android:editable="false"  
+            android:layout_weight="1"  
+            android:textColor="#FF0000"  
+            android:text="0.00"/>  
+        <Button android:id="@+id/btnJisuan"  
+            android:layout_width="wrap_content"   
+            android:layout_height="wrap_content"  
+            android:layout_span="2"  
+            android:layout_weight="1"  
+            android:textStyle="bold"  
+            android:textSize="18sp"  
+            android:textColor="#0000FF"  
+            android:text="计  算"/>  
+    </TableRow>     
+</TableLayout>  
+  
+<ScrollView  
+    android:layout_width="fill_parent"  
+    android:layout_height="wrap_content"  
+    >  
+    <LinearLayout 
+        android:orientation="vertical"  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        >  
+        <TextView    
+            android:layout_width="fill_parent"   
+            android:layout_height="wrap_content"   
+            android:textSize="16sp"  
+            android:textStyle="bold"  
+            android:textColor="#FF0000"  
+            android:text="个人缴纳社保与公积金缴费比例(可调整)"  
+            />  
+        <TableLayout  
+            android:id="@+id/tlItems"  
+            android:layout_width="fill_parent"   
+            android:layout_height="wrap_content"   
+            >  
+            <TableRow>  
+                <TextView android:text="养老"/>  
+                <EditText android:id="@+id/etYanglao"  
+                    android:layout_width="80dp"   
+                    android:layout_height="wrap_content"  
+                    android:inputType="numberDecimal"  
+                    android:text="8"/>  
+                <TextView android:text="%"/>  
+                <TextView android:id="@+id/tvYanglaoNum"   
+                    android:layout_width="wrap_content"   
+                    android:layout_height="wrap_content"   
+                    android:layout_marginLeft="10dip"  
+                    android:textColor="#00FFFF"  
+                    android:text="0.00"/>  
+            </TableRow>  
+            <TableRow>  
+                <TextView android:text="医疗"/>  
+                <EditText android:id="@+id/etYiliao"  
+                    android:layout_width="80dp"   
+                    android:layout_height="wrap_content"  
+                    android:inputType="numberDecimal"  
+                    android:text="2"/>  
+                <TextView android:text="% + 3元 "/>  
+                <TextView android:id="@+id/tvYiliaoNum"   
+                    android:layout_width="wrap_content"   
+                    android:layout_height="wrap_content"   
+                    android:layout_marginLeft="10dip"  
+                    android:textColor="#00FFFF"   
+                    android:text="0.00"/>  
+            </TableRow>  
+            <TableRow>  
+                <TextView android:text="失业"/>  
+                <EditText android:id="@+id/etShiye"  
+                    android:layout_width="80dp"   
+                    android:layout_height="wrap_content"  
+                    android:inputType="numberDecimal"  
+                    android:text="0.2"/>  
+                <TextView android:text="%"/>  
+                <TextView android:id="@+id/tvShiyeNum"   
+                    android:layout_width="wrap_content"   
+                    android:layout_height="wrap_content"   
+                    android:layout_marginLeft="10dip"  
+                    android:textColor="#00FFFF"   
+                    android:text="0.00"/>  
+            </TableRow>     
+            <TableRow>  
+                <TextView android:text="住房公积金 "/>  
+                <EditText android:id="@+id/etZhufang"  
+                    android:layout_width="80dp"   
+                    android:layout_height="wrap_content"  
+                    android:inputType="numberDecimal"  
+                    android:text="12"/>  
+                <TextView android:text="%"/>  
+                <TextView android:id="@+id/tvZhufangNum"   
+                    android:layout_width="wrap_content"   
+                    android:layout_height="wrap_content"   
+                    android:layout_marginLeft="10dip"  
+                    android:textColor="#00FFFF"   
+                    android:text="0.00"/>  
+            </TableRow>  
+        </TableLayout>  
+        <TextView   
+            android:layout_width="wrap_content"   
+            android:layout_height="wrap_content"   
+            android:textSize="16sp"  
+            android:textStyle="bold"  
+            android:textColor="#FF0000"  
+            android:text="缴费基数(可调整)"/>  
+        <TableLayout  
+            android:id="@+id/tlZhengshuiJishu"  
+            android:layout_width="fill_parent"   
+            android:layout_height="wrap_content"   
+            >  
+            <TableRow>  
+                <TextView android:text="社保:"/>  
+                <EditText android:id="@+id/etShebaoBase"  
+                    android:layout_width="wrap_content"   
+                    android:layout_height="wrap_content"  
+                    android:inputType="numberDecimal"  
+                    android:layout_weight="1"  
+                    android:text=""/>  
+                <TextView android:text="医疗:"/>  
+                <EditText android:id="@+id/etYiliaoBase"  
+                    android:layout_width="wrap_content"   
+                    android:layout_height="wrap_content"  
+                    android:inputType="numberDecimal"  
+                    android:layout_weight="1"  
+                    android:text=""/>  
+            </TableRow>  
+            <TableRow>  
+                <TextView android:text="住房公积金:"/>  
+                <EditText android:id="@+id/etZhufangBase"  
+                    android:layout_width="wrap_content"   
+                    android:layout_height="wrap_content"  
+                    android:inputType="numberDecimal"  
+                    android:layout_weight="1"  
+                    android:text=""/>  
+                <TextView android:text="个税起征点 :"/>  
+                <EditText android:id="@+id/etQizhengdianBase"  
+                    android:layout_width="wrap_content"   
+                    android:layout_height="wrap_content"  
+                    android:inputType="numberDecimal"  
+                    android:layout_weight="1"  
+                    android:text="2000"/>  
+            </TableRow>  
+        </TableLayout>  
+    </LinearLayout>  
+</ScrollView>
+
+</LinearLayout>
